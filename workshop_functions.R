@@ -28,7 +28,7 @@ johnson.neyman.reg = function(dependent,predictor,moderator){
   ci.low = w1.hat - t*se.w1
   ci.upp = w1.hat + t*se.w1
   w1.tab = data.frame(w1.hat,z=z.tab[,1],z.tab[,2],ci.low,ci.upp)
-  colnames(w1.tab) = c("Est","Z","Significant","95_LB", "95_UB")
+  colnames(w1.tab) = c("Est","Z","Significant","LB95", "UB95")
   w1.tab[,3] = ifelse(w1.tab[,3]=="1","Yes","No")
   w1.tab
 }

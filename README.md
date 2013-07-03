@@ -1,4 +1,4 @@
-mediatoR
+mediation workshop
 ========
 
-Functions for mediation and moderation in R
+Functions for the mediation and moderation R workshop
