@@ -9,12 +9,14 @@
 ## Preamble, run only once
 install.packages("mediation")
 install.packages("MBESS")
+install.packages("multilevel")
 
 
 ## Load required libraries
 source("workshop_functions.R")
 library(mediation)
 library(ggplot2)
+library(multilevel)
 
 ## Jobs data set 
 data(jobs) # To learn about the dataset type: ?jobs
@@ -87,3 +89,7 @@ plot(step3)
 # Automating it with mediation
 set.seed(5452)
 mediation(x = jobs$econ_hard, mediator = jobs$job_seek, dv = jobs$depress2, bootstrap = T)
+
+# Sobel test
+sobel(pred = jobs$econ_hard, med = jobs$job_seek, out = jobs$depress2)
+
